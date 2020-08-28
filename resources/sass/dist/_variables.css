@@ -1,0 +1,18 @@
+@font-face {
+  font-family: Open_sans;
+  src: url("../Font/open-sans/OpenSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: UTM BryantLG;
+  src: url("../Font/utm-bryantlg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: UTM BryantLG_B;
+  src: url("../Font/utm-bryantlg-b.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
