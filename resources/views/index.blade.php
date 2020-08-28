@@ -16,9 +16,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/slick-theme.css') }}"/>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet"> 
+    
 </head>
 <body class="w-100">
 
