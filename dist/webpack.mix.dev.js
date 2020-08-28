@@ -1,5 +1,6 @@
-const mix = require('laravel-mix');
+"use strict";
 
+var mix = require('laravel-mix');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,7 +12,5 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    
-.copy('node_modules/slick-carousel/slick', 'public/assets/slick')
-    .sass('resources/sass/app.scss', 'public/css');
+
+mix.js('resources/js/app.js', 'public/js').copy('node_modules/slick-carousel/slick', 'public/assets/slick').sass('resources/sass/app.scss', 'public/css');

@@ -17,12 +17,24 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/slick-theme.css') }}"/>
 </head>
 <body class="w-100">
-@extends('layouts.header')
-@extends('layouts.course')
 
-@extends('layouts.footer')
+    @extends('layouts.message')
+    @extends('layouts.footer')
+    @extends('layouts.course')
+    @extends('layouts.whyhapolearn')
+    @extends('layouts.feedback')
+    @extends('layouts.startLearn')
+    @extends('layouts.stastic')
+    @extends('layouts.header')
 
 </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script> 
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script> 
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>  
 </html>

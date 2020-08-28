@@ -1,7 +1,6 @@
-@import 'variable+mixin.scss';
 .why-hapolearn {
   height: 740px;
-  background-image: url("../image/BG.png");
+  background-image: url("../../storage/app/public/image/BG.png");
 
   .image img {
     margin-top: -55%;
@@ -28,7 +27,7 @@
   }
   
   li {
-    list-style-image: url("../image/li.png");
+    list-style-image: url("../../storage/app/public/image/li.png");
     font: normal normal 20px 'UTM BryantLG';
     letter-spacing: -0.05em;
     -webkit-text-stroke: 0.5px $color;
