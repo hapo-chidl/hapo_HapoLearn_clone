@@ -7,4 +7,3 @@
         <a class="pt-xl-3 pt-2" href="#">Start Learning Now !</a>
     </div>
 </section>
-    

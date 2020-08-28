@@ -1,5 +1,4 @@
 @media only screen and (max-width: 768px) {
-
   .img-header {
     img {
       @include sizeImage(300px, 61.74px);
@@ -18,6 +17,7 @@
     .header-content 
     {
       height: 350px;
+
     .content {
       padding: 70px 0 0 0;
       margin-left: -40px;
@@ -39,8 +39,6 @@
     }
   }
 }
-
-
 
   .course {
     margin-top: -70px !important;
@@ -77,6 +75,7 @@
   .other-course {
     margin: 40px 0 0 33%;
     @include sizeImage (230px, 220px);
+
     p {
       font-size: 35px;
     }
@@ -91,8 +90,10 @@
   .why-hapolearn {
     height: 420px;
   }
+
   .why-hapo-content {
     margin-top: 0;
+
     .menu {
       margin-left: 0;
 
@@ -154,14 +155,12 @@
   }
 
   .menu-footer {
-
     .menu-content {
       a {
         font-size: 16px !important;
       }
     }
   }
-
 }
 
 @media only screen and (max-width: 425px) {
@@ -370,4 +369,3 @@
     }
   }
 }
-

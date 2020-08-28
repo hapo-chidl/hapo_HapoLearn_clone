@@ -6,7 +6,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'HapoLearn') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -24,9 +24,9 @@
     @extends('layouts.message')
     @extends('layouts.footer')
     @extends('layouts.course')
-    @extends('layouts.whyhapolearn')
+    @extends('layouts.why_hapo_learn')
     @extends('layouts.feedback')
-    @extends('layouts.startLearn')
+    @extends('layouts.start_learn')
     @extends('layouts.stastic')
     @extends('layouts.header')
 
