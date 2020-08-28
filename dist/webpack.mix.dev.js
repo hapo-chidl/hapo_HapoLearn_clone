@@ -12,5 +12,4 @@ var mix = require('laravel-mix');
  |
  */
 
-
 mix.js('resources/js/app.js', 'public/js').copy('node_modules/slick-carousel/slick', 'public/assets/slick').sass('resources/sass/app.scss', 'public/css');
