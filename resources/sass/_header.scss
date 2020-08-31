@@ -42,11 +42,12 @@ p {
 
 .header-content {
  
-  background-image: url("../../storage/app/public/image/Hapo_Learn_banner.png");
+  background-image: url("../../storage/app/public/image/Hapo_Learn_banner.png") cover;
   height: 655px;
-  background-size: cover;
+
   .content {
     padding: 200px 0 0 5%;
+    
   .slogan-up {
     margin: 0 0 0 59px;
     @extend p;

@@ -17,7 +17,10 @@
     .header-content 
     {
       height: 350px;
+    }
+  }
 
+  .header-banner {
     .content {
       padding: 70px 0 0 0;
       margin-left: -40px;
@@ -25,20 +28,21 @@
       p {
         font-size: 28px !important;
       }
-
-      pre {
-        margin: -5px 0 0 -45px;
-        @include font(UTM BryantLG, #505353, 16px);
-      }
-
-      a {
-        font-size: 16px;
-        margin-top: -5px;
-        @include button ($bg_color, 37.14px, 200px, 35px);
-      }
     }
   }
-}
+
+  .header-banner .content {   
+    pre {
+      margin: -5px 0 0 -45px;
+      @include font(UTM BryantLG, #505353, 16px);
+    }
+
+    a {
+      font-size: 16px;
+      margin-top: -5px;
+      @include button ($bg_color, 37.14px, 200px, 35px);
+    }
+  }
 
   .course {
     margin-top: -70px !important;
@@ -126,12 +130,12 @@
       font-size: 35px ;
       }
     }
+  }
 
-    .btn-start-learning {
-      a {
-        font-size: 20px;
-        @include button($color, 46.42px, 250px, 35px);
-      }
+  .btn-start-learning {
+    a {
+      font-size: 20px;
+      @include button($color, 46.42px, 250px, 35px);
     }
   }
 
@@ -189,33 +193,36 @@
     {
       height: 200px;
    
-    .content {
-      padding: 200px 0 0 12%;
-      margin-left: 0;
-
-      p {
-        font-size: 22px !important;
-        padding-top: 0;
-      }
-
-      .slogan-down img {
-        @include sizeImage(27.16px, 25.16px);
-      }
-
-      pre {
-        margin: 0 0 0 -25px;
-        @include font(UTM BryantLG, #505353, 14px);
-      }
-
-      a {
-        font-size: 16px;
-        padding: 12px 52px 12.52px 52px;
-        @include textStoke(UTM BryantLG, 0.1px, $color);
-        @include button ($bg_color, 37.14px, 200px, 35px);
+      .content {
+        padding: 200px 0 0 12%;
+        margin-left: 0;
       }
     }
   }
+  
+  .header-content {
+    p {
+      font-size: 22px !important;
+      padding-top: 0;
+    }
+
+    .slogan-down img {
+      @include sizeImage(27.16px, 25.16px);
+    }
+
+    pre {
+      margin: 0 0 0 -25px;
+      @include font(UTM BryantLG, #505353, 14px);
+    }
   }
+
+  .header-content a {
+    font-size: 16px;
+    padding: 12px 52px 12.52px 52px;
+    @include textStoke(UTM BryantLG, 0.1px, $color);
+    @include button ($bg_color, 37.14px, 200px, 35px);
+  }
+
 
   .header-footer {
     height: 310px;
@@ -297,20 +304,20 @@
       }
     }
   }
-
-  .fb-content {
-    .fb-user-content {
-      p {
-        font-size: 14px;
-      }
+    
+  .fb-user-content {
+    p {
+      font-size: 14px;
     }
-    .user-comment {
-      b {
-        font-size: 16px;
-      }
-      p {
-        font-size: 14px;
-      }
+  }
+
+  .user-comment {
+    b {
+      font-size: 16px;
+    }
+      
+    p {
+      font-size: 14px;
     }
   }
 

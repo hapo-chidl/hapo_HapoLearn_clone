@@ -27,16 +27,15 @@
     .image {
       height: 194px;
     }
-
   }
 }
 
 .card-body {
   .card-title {
     font: normal normal 30px 'UTM BryabtLG';
-    color: #B2D235;
+    color: $bg_color;
     text-align: center;
-    -webkit-text-stroke: 0.5px #B2D235;
+    -webkit-text-stroke: 0.5px $bg_color;
   }
 
   .card-text {
@@ -96,7 +95,6 @@
 
 .other-course {
   margin: 70px 0 15px 30%;
-  
   letter-spacing: -0.02em;
   color: $text_color;
   -webkit-text-stroke: 0.5px $text_color;
@@ -112,7 +110,6 @@
 }
 
 .all-of-course {
- 
   text-align: center;
   margin-bottom: 100px;
   cursor: pointer;
@@ -120,7 +117,7 @@
   a {
     text-decoration: none;
     color: $bg_color;
-    font: normal bold 45px 'UTM BryantLG_B_B';
+    font: normal bold 45px 'UTM BryantLG_B';
     letter-spacing: -0.02em;
     -webkit-text-stroke: 0.5px $bg_color;
   }
