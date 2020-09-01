@@ -17,12 +17,22 @@ use Illuminate\Support\Str;
 |
 */
 
-$factory->define(User::class, function (Faker $faker) {
+$factory->define(App\course\User::class, function (Faker $faker) {
+    $image = "storage\image\account.png";
+    $role = mt_rand(0, 1);
+    if($role == 1){
+        $introduction = "Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim.
+                         Sed quis rutrum tellus, sit amet viverra felis. Cras sagittis sem sit amet urna
+                         feugiat rutrun. ";
+    } else $introduction = NULL;
+    
     return [
         'name' => $faker->name,
+        'avatar' => $image,
+        'role' => $role,
         'email' => $faker->unique()->safeEmail,
-        'email_verified_at' => now(),
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'introduction' => $introduction,
         'remember_token' => Str::random(10),
     ];
 });
