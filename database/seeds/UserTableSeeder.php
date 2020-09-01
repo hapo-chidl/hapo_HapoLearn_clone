@@ -15,4 +15,3 @@ class UserTableSeeder extends Seeder
         factory(App\course\User::class, 20)->create();
     }
 }
-        
