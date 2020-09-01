@@ -36,7 +36,7 @@
     </div>
     <div class="card-deck frontend-course row flex-sm-nowrap ml-5 ml-md-0">
         <div class="card">
-            <div class="image css-course"><img alt=".." class="img-fluid mt-4 mt-md-3 px-md-5 py-md-5" "></div>
+            <div class="image css-course"><img alt=".." class="img-fluid mt-4 mt-md-3 px-md-5 py-md-5"  src="{{ asset('storage/image/CSS.png') }}"></div>
             <div class="card-body">
                 <p class="card-title mt-1 mt-md-0">CSS Tutorial</p>
                 <p class="card-text mb-xl-4 mb-md-0">I knew hardly anything about HTML, JS, and CSS before entering New Media. I had coded quite a bit, but never touched
