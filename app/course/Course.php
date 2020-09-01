@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 use Tag;
 use User;
 use Lesson;
+use SoftDeletes;
 
-class Course extends Model
+class Course extends Model 
 {
-    use SoftDeletes;
     protected $fillable = [
         'name', 'image', 'requements', 'description', 'price', 'time',
     ];
@@ -28,4 +28,10 @@ class Course extends Model
     {
         return $this->belongsToMany(User::class, 'user_id');
     }
+
+    public function getCountLessonAttribute()
+    {
+        return $this->lessons()->count();
+    }
+
 }

@@ -20,6 +20,7 @@ class CreateCoursesTable extends Migration
             $table->longText('requements')->nullable();
             $table->longText('description')->nullable();
             $table->integer('price')->nullable();
+            $table->integer('time')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

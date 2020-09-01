@@ -22,6 +22,7 @@
 <body class="w-100">
 
     @extends('layouts.message')
+    @include('layouts.banner')
     @extends('layouts.footer')
     @extends('layouts.course')
     @extends('layouts.why_hapo_learn')
