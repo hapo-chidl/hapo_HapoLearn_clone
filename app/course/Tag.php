@@ -4,12 +4,12 @@ namespace App\course;
 
 use Illuminate\Database\Eloquent\Model;
 use Course;
+use SoftDeletes;
 
 class Tag extends Model
 {
-    use SoftDeletes;
     protected $fillable = [
-        'name', 
+        'name',
     ];
 
     public function courses()
