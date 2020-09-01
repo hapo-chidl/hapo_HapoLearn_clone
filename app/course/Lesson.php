@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 use User;
 use Review;
 use Course;
+use SoftDeletes;
 
 class Lesson extends Model
 {
-    use SoftDeletes;
     protected $fillable = [
         'name', 'requements', 'description', 'course_id',
     ];
