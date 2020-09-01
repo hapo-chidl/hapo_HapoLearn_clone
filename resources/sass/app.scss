@@ -6,3 +6,18 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~slick-carousel/slick/slick.css';
+
+//Home Hapo Learn
+@import 'header';
+@import 'course';
+@import 'feedback';
+@import 'why-hapolearn';
+@import 'startLearn';
+@import 'static';
+@import 'footer';
+@import 'reponsive';
+
+// FontAwesome
+@import '~font-awesome/css/font-awesome.css';
