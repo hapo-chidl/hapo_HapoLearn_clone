@@ -9,7 +9,7 @@ class Tag extends Model
 {
     use SoftDeletes;
     protected $fillable = [
-        'name', 
+        'name',
     ];
 
     public function courses()
