@@ -15,8 +15,8 @@ $factory->define(App\course\Lesson::class, function (Faker $faker) {
     
     return [
         'name' => $name,
-        'requements' => $requements, 
+        'requements' => $requements,
         'description' => $requements,
-        'course_id' => mt_rand(0 ,20)
+        'course_id' => mt_rand(0, 20)
     ];
 });
