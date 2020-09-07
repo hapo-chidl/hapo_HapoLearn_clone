@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/list-course', 'CourseController@index')->name('list_course');
+Route::get('/search-course', 'CourseController@searchCourse')->name('list_course.search');
