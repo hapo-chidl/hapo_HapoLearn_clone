@@ -8,7 +8,7 @@
         Filter
     </div>
     <div class="listcourse-search d-flex col-9 d-flex">
-        <form method="get" action="{{ route('list_course.search') }}" class="col-12 d-flex">
+        <form method="get" action="{{ route('list_course') }}" class="col-12 d-flex">
             @csrf
             <input type="text" name="course_search" class="form-control col-7"  placeholder="Search...." aria-label="Search" @if (isset($keyword)) value="{{ $keyword }}" @endif>
             <input type="submit" class="btn btn-search" value="Search"/>
