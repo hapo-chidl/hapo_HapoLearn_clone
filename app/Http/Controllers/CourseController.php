@@ -13,7 +13,6 @@ class CourseController extends Controller
         return view('layouts.listcourse')->with('listCourse', $courses);
     }
 
-    
     public function searchCourse(Request $request)
     {
         $keyword = $request->course_search;
@@ -22,5 +21,4 @@ class CourseController extends Controller
                         ->paginate(config('Paginate.pagination'));
         return view('layouts.listcourse')->with('listCourse', $courses);
     }
-
 }
