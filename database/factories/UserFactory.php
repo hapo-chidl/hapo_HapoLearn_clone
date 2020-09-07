@@ -24,8 +24,9 @@ $factory->define(App\course\User::class, function (Faker $faker) {
         $introduction = "Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim.
                         Sed quis rutrum tellus, sit amet viverra felis. Cras sagittis sem sit amet urn 
                         feugiat rutrun. ";
-    } else
+    } else {
         $introduction = null;
+    }
     
     return [
         'name' => $faker->name,
