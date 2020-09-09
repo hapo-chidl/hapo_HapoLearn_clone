@@ -26,7 +26,7 @@
                     <a class="nav-link" href="#">LIST&nbsp;LESSON</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ALL&nbsp;COURSE</a>
+                    <a class="nav-link" href="{{ route('list_course') }}">ALL&nbsp;COURSE</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">PROFILE</a>

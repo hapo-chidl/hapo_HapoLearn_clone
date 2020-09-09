@@ -20,9 +20,13 @@ use Illuminate\Support\Str;
 $factory->define(App\course\User::class, function (Faker $faker) {
     $image = "storage\image\account.png";
     $role = mt_rand(0, 1);
-    if ($role == 1){
-        $introduction = "Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Sed quis rutrum tellus, sit amet viverra felis. Cras sagittis sem sit amet urn feugiat rutrun. ";
-    } else $introduction = null;
+    if ($role == 1) {
+        $introduction = "Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim.
+            Sed quis rutrum tellus, sit amet viverra felis. Cras sagittis sem sit amet urn 
+            feugiat rutrun. ";
+    } else {
+        $introduction = null;
+    }
     
     return [
         'name' => $faker->name,
