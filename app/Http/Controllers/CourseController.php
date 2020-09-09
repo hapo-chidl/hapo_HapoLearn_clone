@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\course\Course;
+use App\course\Lesson;
 
 class CourseController extends Controller
 {
@@ -17,5 +18,13 @@ class CourseController extends Controller
         }
         $courses = $courses->paginate(config('Paginate.pagination'));
         return view('layouts.listcourse')->with('listCourse', $courses);
+    }
+    
+    public function show($id) {
+        $courseDetail = Course::findOrFail(1);
+        $lessons = $courseDetail->lessons();
+        $teachers = $courseDetail->users();
+        $countLesson = $lessons->count();
+        return view('layouts.course-detail', compact('lessons', 'courseDetail', 'countLesson','teachers'));
     }
 }

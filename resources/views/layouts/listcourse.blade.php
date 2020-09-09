@@ -27,7 +27,7 @@
                 <div class = "card-text mb-3">
                     {{ $courses->description }}
                 </div>
-                <a class= "card-link " href="#"> More </a>
+                <a class= "card-link " href="{{ route('course_detail', $courses->id) }}"> More </a>
             </div>
        </div>      
             <div class="footer d-flex mt-3 justify-content-around pb-3" >
