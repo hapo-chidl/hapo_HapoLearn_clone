@@ -11,7 +11,7 @@ class CourseController extends Controller
     {
         $keyword = $request->course_search;
         $courses = Course::query();
-        if ($keyword != null) {
+        if ($keyword) {
             $courses = $courses->where('name', 'like', "%".$keyword."%")
                 ->orWhere('description', 'like', "%".$keyword."%");
         }
