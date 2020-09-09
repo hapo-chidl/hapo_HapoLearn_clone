@@ -11,10 +11,10 @@ class CourseController extends Controller
     {
         $keyword = $request->course_search;
         $courses = Course::query();
-        if ($keyword !=NULL) {
+        if ($keyword != null) {
             $courses = $courses->where('name', 'like', "%".$keyword."%")
-                ->orWhere('description', 'like', "%".$keyword."%"); 
-            }
+                ->orWhere('description', 'like', "%".$keyword."%");
+        }
         $courses = $courses->paginate(config('Paginate.pagination'));
         return view('layouts.listcourse')->with('listCourse', $courses);
     }
