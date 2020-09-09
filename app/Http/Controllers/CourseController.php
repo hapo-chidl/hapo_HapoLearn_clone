@@ -10,13 +10,9 @@ class CourseController extends Controller
     public function index(Request $request)
     {
         $keyword = $request->course_search;
-        if ($keyword != "") {
-            $courses = Course::where('name', 'like', '%'.$keyword.'%')
-                            ->orWhere('description', 'like', '%'.$keyword.'%')
-                            ->paginate(config('Paginate.pagination'));
-        } else {
-            $courses = Course::paginate(config('Paginate.pagination'));
-        }
+        $courses = Course::query()->where('name', 'like', "%".$keyword."%")
+                                  ->orWhere('description', 'like', "%".$keyword."%")
+                                  ->paginate(config('Paginate.pagination'));
         return view('layouts.listcourse')->with('listCourse', $courses);
     }
 }
