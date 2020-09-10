@@ -14,7 +14,7 @@
         <div class="col-xl-8 col-md-12 collapse navbar-collapse d-md-flex flex-md-nowrap justify-content-xl-around justify-content-center mt-lg-4" id="collapsingNavbar">
             <ul class="nav navbar-nav menu-header">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">HOME</a>
+                    <a class="nav-link" href="/">HOME</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">LOGIN/REGISTER</a>

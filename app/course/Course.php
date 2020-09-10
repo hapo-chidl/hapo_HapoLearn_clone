@@ -50,16 +50,16 @@ class Course extends Model
     public function getOtherCourseAttribute()
     {
         return $this->where('id', '!=', $this->id)
-                    ->take(config('Paginate.other-course'))->get();
+            ->paginate(config('Paginate.other-course'));
     }
 
     public function getTagNameAttribute()
     {
         $tags = $this->tags;
         if (count($tags) > 0) {
-            $tagName = '#' . $tags->first()->name;
+            $tagName = $tags->first()->name;
             for ($i = 1; $i < count($tags); $i++) {
-                $tagName .= ", " . '#' . $tags[$i] ->name;
+                $tagName .= ", " . $tags[$i] ->name;
             }
         } else {
             $tagName = "#All";
@@ -71,6 +71,7 @@ class Course extends Model
     public function getNumOfUserAttribute()
     {
         $total = $this->users()->count();
+
         return $total;
     }
 
@@ -78,7 +79,7 @@ class Course extends Model
     {
         $time = $this->time;
         if ($time == null) {
-            $time = '0 H';
+            $time = "0 H";
         } else {
             $time .= " H";
         }
@@ -88,8 +89,15 @@ class Course extends Model
 
     public function getLessonCourseAttribute()
     {
-        $lesson= $this->lessons()
-            ->paginate(config('Paginate.pagination-lesson'));
+        $lesson= $this->lessons();
         return $lesson;
+    }
+
+    public function getTeacherCourseAttribute()
+    {
+        $teacher = $this->users()
+            ->where('role', '=', '1')
+            ->paginate(config('Paginate.user'));
+        return $teacher;
     }
 }

@@ -19,9 +19,16 @@ class CourseController extends Controller
         $courses = $courses->paginate(config('Paginate.pagination'));
         return view('layouts.listcourse')->with('listCourse', $courses);
     }
-    
-    public function show($id) {
-        $courseDetail = Course::findOrFail(1);
-        return view('layouts.course-detail', compact('courseDetail'));
+
+    public function show($id, Request $request) {
+        $courseDetail = Course::findOrFail($id);
+        $keyword = $request->lesson_search;
+        $lessons = $courseDetail->lesson_course;
+        if($keyword) {
+            $lessons = $lessons->where('name', 'like', "%".$keyword."%");
+        }
+        $lessons= $lessons->paginate(config('Paginate.pagination-lesson'));
+        return view('layouts.course-detail', compact('courseDetail', 'lessons'));
     }
+
 }
