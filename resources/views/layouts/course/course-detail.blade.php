@@ -81,7 +81,7 @@
                     <tr class="row content">
                         <td class="col-3 text-center">{{ $key+1 }}</td>
                         <td class="col-8 "><a href="{{ route('course_detail', $otherCourse->id) }}">{{ $otherCourse->name }}</a></td>
-                    </tr> 
+                    </tr> an
                 @endforeach
                     <tr >
                         <td colspan="2" class="text-center pt-4 pb-3 button"><a href="#" class="px-3 py-2">View all our courses</a></td>
