@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\course\Course;
+use App\Models\Course;
+use App\Models\Lesson;
 
 class CourseController extends Controller
 {
@@ -17,5 +18,17 @@ class CourseController extends Controller
         }
         $courses = $courses->paginate(config('Paginate.pagination'));
         return view('layouts.listcourse')->with('listCourse', $courses);
+    }
+
+    public function show($id, Request $request)
+    {
+        $courseDetail = Course::findOrFail($id);
+        $keyword = $request->lesson_search;
+        $lessons = $courseDetail->lesson_course;
+        if ($keyword) {
+            $lessons = $lessons->where('name', 'like', "%".$keyword."%");
+        }
+        $lessons = $lessons->paginate(config('Paginate.pagination-lesson'));
+        return view('layouts.course-detail', compact('courseDetail', 'lessons'));
     }
 }
