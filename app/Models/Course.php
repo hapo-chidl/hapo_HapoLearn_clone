@@ -3,9 +3,9 @@
 namespace App\course;
 
 use Illuminate\Database\Eloquent\Model;
-use App\course\Tag;
-use App\course\User;
-use App\course\Lesson;
+use App\Models\Tag;
+use App\Models\User;
+use App\Models\Lesson;
 use SoftDeletes;
 
 class Course extends Model
