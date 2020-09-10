@@ -1,9 +1,9 @@
 <?php
 
-namespace App\course;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Course;
+use App\Models\Course;
 use SoftDeletes;
 
 class Tag extends Model

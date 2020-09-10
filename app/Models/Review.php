@@ -1,10 +1,10 @@
 <?php
 
-namespace App\course;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Lesson;
-use User;
+use App\Models\Lesson;
+use App\Models\User;
 use SoftDeletes;
 
 class Review extends Model
@@ -15,11 +15,11 @@ class Review extends Model
 
     public function lessons()
     {
-        return $this->belongsTo(Lesson::class, 'lesson_id');
+        return $this->belongsTo(Lesson::class);
     }
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'user_id');
+        return $this->belongsToMany(User::class);
     }
 }

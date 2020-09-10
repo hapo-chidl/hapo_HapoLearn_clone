@@ -1,11 +1,11 @@
 <?php
 
-namespace App\course;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use User;
-use Review;
-use Course;
+use App\Models\User;
+use App\Models\Review;
+use App\Models\Course;
 use SoftDeletes;
 
 class Lesson extends Model
@@ -28,4 +28,11 @@ class Lesson extends Model
     {
         return $this->hasMany(Review::class);
     }
+
+    public function getCourseNameAttribute()
+    {
+        $course =  $this->courses();
+        return $course;
+    }
+
 }
