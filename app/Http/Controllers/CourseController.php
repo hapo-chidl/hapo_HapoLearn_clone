@@ -20,15 +20,15 @@ class CourseController extends Controller
         return view('layouts.listcourse')->with('listCourse', $courses);
     }
 
-    public function show($id, Request $request) {
+    public function show($id, Request $request)
+    {
         $courseDetail = Course::findOrFail($id);
         $keyword = $request->lesson_search;
         $lessons = $courseDetail->lesson_course;
-        if($keyword) {
+        if ($keyword) {
             $lessons = $lessons->where('name', 'like', "%".$keyword."%");
         }
-        $lessons= $lessons->paginate(config('Paginate.pagination-lesson'));
+        $lessons = $lessons->paginate(config('Paginate.pagination-lesson'));
         return view('layouts.course-detail', compact('courseDetail', 'lessons'));
     }
-
 }

@@ -89,7 +89,7 @@ class Course extends Model
 
     public function getLessonCourseAttribute()
     {
-        $lesson= $this->lessons();
+        $lesson = $this->lessons();
         return $lesson;
     }
 
