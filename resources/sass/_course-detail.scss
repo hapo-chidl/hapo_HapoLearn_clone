@@ -107,3 +107,12 @@
     color: $text_card_color;
   }
 }
+
+.end-course {
+  font: normal bold 18px/22px 'UTM BryantLG';
+  color: $color;
+  border: 0.3px solid $color;
+  background: $bg_color;
+  box-shadow: inset 0 1.5px 2px #6F8710;
+  border-radius: 22px;
+}

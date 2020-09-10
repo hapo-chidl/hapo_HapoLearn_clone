@@ -20,3 +20,4 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/list-course', 'CourseController@index')->name('list_course');
 Route::get('/list-course/{id}', 'CourseController@show')->name('course_detail');
+Route::get('/list-course/{course_id}/{lesson_id}','LessonController@showLesson')->name('lesson');

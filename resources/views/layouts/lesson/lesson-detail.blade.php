@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="course-detail1 my-5 d-flex flex-row justify-content-center">
+<div class="course-detail my-5 d-flex flex-row justify-content-center">
     <div class="course-detail col-5 mr-5 ">
         <div class="course-detail-image px-5 py-5">
             <img  src="{{ asset('storage/image/course.png') }}">
@@ -10,15 +10,16 @@
         <div class="list-about-course py-3">
             <div class = "list-title mb-3">
                 <ul class="nav pb-1">
-                    <li data-li="lesson" class="nav-item ml-5 active">Lessons</li>
+                    <li data-li="lesson" class="nav-item ml-5 active">Description</li>
                     <li data-li="teacher" class="nav-item ml-5">Teachers</li>
-                    <li data-li="review" class="nav-item ml-5">Reviews</li>
+                    <li data-li="program" class="nav-item ml-5">Program</li>
+                    <li data-li="review" class="nav-item ml-5">Review</li>
                 </ul>
             </div>
             <div class="more-information">
                 <div class="lesson item">
                     <div class = "search-lesson">
-                        <form method="get" action="{{ route('course_detail', $courseDetail->id) }}" class="col-12 d-flex">
+                        <form method="get" action="{{ route('lesson', $lessonDetail->course_name->id, $lessonDetail->id) }}" class="col-12 d-flex">
                             @csrf
                             <input type="text" name="lesson_search" class="form-control col-5 mr-2"  placeholder="Search...." aria-label="Search" @if (isset($keyword)) value="{{ $keyword }}" @endif>
                             <input type="submit" class="btn btn-search" value="Tìm kiếm"/>
@@ -35,8 +36,12 @@
                     @endforeach
                     </table>
                 </div>
-                <div class="teacher item" style="display: none; "> @include('layouts.teacher')</div>
-                <div class="review item" style="display: none; ">Review</div>
+                <div class="teacher item" style="display: none; ">
+                    @include('layouts.teacher')
+                </div>
+                <div class="review item" style="display: none; ">
+                    Review
+                </div>
             </div>
         </div>
     </div>
@@ -72,6 +77,9 @@
                     <td class="col-5 title">Price: </td>
                     <td class="col-3">{{ $courseDetail->price_course }}</td>
                 </tr>
+                <tr class="row">
+                    <td colspan="3"><a href="#" class="end-course"> Kết thúc khóa học</a></td>
+                </tr>
             </table>
         </div>
         <div class="other-courses ml-0 mt-5">
@@ -89,8 +97,6 @@
             </table>
         </div>
     </div>
-    </div>
-    </div>
+</div>
 
 @endsection
-
