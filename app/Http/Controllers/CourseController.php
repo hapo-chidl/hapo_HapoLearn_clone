@@ -22,9 +22,6 @@ class CourseController extends Controller
     
     public function show($id) {
         $courseDetail = Course::findOrFail(1);
-        $lessons = $courseDetail->lessons();
-        $teachers = $courseDetail->users();
-        $countLesson = $lessons->count();
-        return view('layouts.course-detail', compact('lessons', 'courseDetail', 'countLesson','teachers'));
+        return view('layouts.course-detail', compact('courseDetail'));
     }
 }

@@ -26,16 +26,13 @@
                         </form>   
                     </div>
                     <table class="table list-lesson mt-3">
+                    @foreach($courseDetail->lesson_course as $key => $lesson)
                         <tr class="row">
-                            <td class="col-1 ">1</td>
-                            <td class="col-7">ABC</td>
+                            <td class="col-1 ">{{ $key+1 }}</td>
+                            <td class="col-7">{{ $lesson->name }}</td>
                             <td class="col-3"> <a href="#" class="px-4 py-2">Learn </a> </td>
                         </tr>
-                        <tr class="row">
-                            <td class="col-1">1</td>
-                            <td class="col-7">ABC</td>
-                            <td class="col-3"> <a href="#" class="px-4 py-2">Learn </a> </td>
-                        </tr>
+                        @endforeach
                     </table>
                 </div>
                 <div class="teacher item" style="display: none; ">
@@ -61,39 +58,41 @@
                 <tr class="row">
                     <td class="col-4 "><img src="{{ asset('storage/image/learners.png') }}"> </td>
                     <td class="col-5 title">Learner: </td>
-                    <td class="col-3"> 500 </a> </td>
+                    <td class="col-3"> {{ $courseDetail->num_of_user }}</a> </td>
                 </tr>
                 <tr class="row">
                     <td class="col-4 "><img src="{{ asset('storage/image/lessons.png') }}"></td>
                     <td class="col-5 title">Lessons: </td>
-                    <td class="col-3"> 500 </a> </td>
+                    <td class="col-3">{{ $courseDetail->num_of_lesson }}</a> </td>
                 </tr>
                 <tr class="row">
                     <td class="col-4 "><img src="{{ asset('storage/image/times.png') }}"></td>
                     <td class="col-5 title">Times: </td>
-                    <td class="col-3"> 500 </a> </td>
+                    <td class="col-3">{{ $courseDetail->time_course }}</td>
                 </tr>
                 <tr class="row">
                     <td class="col-4 "><img src="{{ asset('storage/image/tags.png') }}"></td>
                     <td class="col-5 title">Tags: </td>
-                    <td class="col-3"> 500 </a> </td>
+                    <td class="col-3">{{ $courseDetail->tag_name }}</td>
                 </tr>
                 <tr class="row">
                     <td class="col-4 "><img src="{{ asset('storage/image/price.png') }}"></td>
                     <td class="col-5 title">Price: </td>
-                    <td class="col-3"> 500 </a> </td>
+                    <td class="col-3">{{ $courseDetail->price_course }}</td>
                 </tr>
             </table>
         </div>
         <div class="other-courses ml-0 mt-5">
             <div class="text-center course-title py-2">Other Course</div>
             <table class="table ml-1">
-                    <tr class="row content">
-                        <td class="col-3 text-center">1. </td>
-                        <td class="col-8 ">ABC </td>
-                    </tr>
+            @foreach($courseDetail->other_course as $key => $otherCourse)
+                   <tr class="row content">
+                        <td class="col-3 text-center">{{ $key+1 }}</td>
+                          <td class="col-8 "><a href="{{ route('course_detail', $otherCourse->id) }}">{{ $otherCourse->name }}</a></td>
+                    </tr> 
+                    @endforeach
                     <tr >
-                        <td colspan="2" class="text-center pt-4 pb-3"><a href="#" class="px-3 py-2">View all our courses</a></td>
+                        <td colspan="2" class="text-center pt-4 pb-3 button"><a href="#" class="px-3 py-2">View all our courses</a></td>
                     </tr>
             </table>
         </div>

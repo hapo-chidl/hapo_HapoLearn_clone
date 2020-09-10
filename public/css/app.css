@@ -21824,7 +21824,7 @@ p,
   border: 1px solid #DEDEDE;
 }
 
-.other-courses a {
+.other-courses .button a {
   font: normal bold 18px/22px "UTM BryantLG";
   color: white;
   border: 0.3px solid white;
@@ -21853,9 +21853,18 @@ p,
   color: #BDB9B9;
 }
 
-.main-teacher .soical img {
-  border: 0.5px solid #F44336;
+.soical img {
   border-radius: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.google .slack {
+  border: 0.5px solid #F44336;
+}
+
+.facebook {
+  border: 0.5px solid #1976D2;
 }
 
 .teacher-intro {
