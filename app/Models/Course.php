@@ -1,6 +1,6 @@
 <?php
 
-namespace App\course;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Tag;
@@ -11,7 +11,7 @@ use SoftDeletes;
 class Course extends Model
 {
     protected $fillable = [
-        'name', 'image', 'requements', 'description', 'price', 'time',
+        'name', 'image', 'requement', 'description', 'price', 'time',
     ];
 
     public function lessons()
