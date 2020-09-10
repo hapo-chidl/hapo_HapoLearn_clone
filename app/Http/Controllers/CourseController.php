@@ -17,7 +17,7 @@ class CourseController extends Controller
                 ->orWhere('description', 'like', "%".$keyword."%");
         }
         $courses = $courses->paginate(config('Paginate.pagination'));
-        return view('layouts.listcourse')->with('listCourse', $courses);
+        return view('layouts.course.listcourse')->with('listCourse', $courses);
     }
 
     public function show($id, Request $request)
@@ -29,6 +29,6 @@ class CourseController extends Controller
             $lessons = $lessons->where('name', 'like', "%".$keyword."%");
         }
         $lessons = $lessons->paginate(config('Paginate.pagination-lesson'));
-        return view('layouts.course-detail', compact('courseDetail', 'lessons'));
+        return view('layouts.course.course-detail', compact('courseDetail', 'lessons'));
     }
 }

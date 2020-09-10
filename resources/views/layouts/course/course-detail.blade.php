@@ -35,7 +35,7 @@
                     @endforeach
                     </table>
                 </div>
-                <div class="teacher item" style="display: none; "> @include('layouts.teacher')</div>
+                <div class="teacher item" style="display: none; "> @include('layouts.course.teacher')</div>
                 <div class="review item" style="display: none; ">Review</div>
             </div>
         </div>
