@@ -19,7 +19,9 @@
     @foreach($listCourse as $key => $courses)
     <div class = "courses col-5 d-flex flex-column mb-3 mr-5">
         <div class="course-body d-flex ">
-            <img class=" col-2 px-3 py-2 mt-4" src="{{ asset ($courses->image) }}">
+            <img class=" col-2 px-3 py-2 mt-4" src="{{ asset ($courses->image) }}" style="width:89px;height:89px;border-radius:50%;
+-moz-border-radius:50%;
+-webkit-border-radius:50%;" >
             <div class ="card-body col-10">
                 <div class="card-title">
                     {{ $courses->name }}
@@ -36,7 +38,7 @@
                         Learner
                     </div>
                     <div class ="footer-number">
-                        2,568
+                        {{ $courses->num_of_user }}
                     </div>
                 </div>
                 <div class="footer-count text-center col-4  d-flex flex-column">
@@ -44,15 +46,15 @@
                         Lessons
                     </div>
                     <div class ="footer-number">
-                        12,568
+                        {{ $courses->num_of_lesson }}
                     </div>
                 </div> 
                 <div class="footer-count text-center col-4  d-flex flex-column">
                     <div class="footer-title mb-2">
-                        Quizzes
+                        Times
                     </div>
                     <div class ="footer-number">
-                        14,125
+                        {{ $courses->time_course }}
                     </div>
                 </div>
             </div>
@@ -60,6 +62,8 @@
     @endforeach
 </div>
 
-{{ $listCourse->links() }}
+<div class="pagination col-12 mt-5 d-flex justify-content-end">
+            {{ $listCourse->links('layouts.paginate') }}
+        </div>
 
 @endsection

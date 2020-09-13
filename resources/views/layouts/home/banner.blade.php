@@ -7,7 +7,7 @@
                 Interactive lessons, "on-the-go"
                 practice, peer support.
             </pre>
-            <a class="ml-5" href="#">Start Learning Now!</a>
+            <a class="ml-5" href="{{ route('list_course') }}">Start Learning Now!</a>
         </div>
     </div>
     <div class="header-footer"></div>

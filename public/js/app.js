@@ -37180,6 +37180,8 @@ for (var i = 0; i < li_elements.length; i++) {
       document.querySelector("." + li_value).style.display = "block";
     } else if (li_value == "lesson") {
       document.querySelector("." + li_value).style.display = "block";
+    } else if (li_value == "program") {
+      document.querySelector("." + li_value).style.display = "block";
     } else {
       console.log("");
     }

@@ -4,6 +4,6 @@
         growing community!</p>
     </div>
     <div class="btn-start-learning d-flex justify-content-center align-items-center px-xl-5 py-xl-5">
-        <a class="pt-xl-3 pt-2" href="#">Start Learning Now !</a>
+        <a class="pt-xl-3 pt-2" href="{{ route('list_course') }}">Start Learning Now !</a>
     </div>
 </section>

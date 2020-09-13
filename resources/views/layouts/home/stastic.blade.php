@@ -8,7 +8,7 @@
                 Courses
             </div>
             <div class="number  mt-1">
-                1,586
+                {{ $courseCount }}
             </div>
         </div>
         <div class="menu col-md-4 col-11 d-flex flex-column justify-content-between mt-md-0 mt-4 ">
@@ -16,7 +16,7 @@
                 Lessons
             </div>
             <div class="number mt-1">
-                2,689
+                {{ $lessonCount }}
             </div>
         </div>
         <div class="menu col-md-4 col-11 d-flex flex-column justify-content-between mt-md-0 mt-4">

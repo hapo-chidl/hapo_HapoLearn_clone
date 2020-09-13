@@ -28,4 +28,19 @@ class User extends Model
     {
         return $this->belongsToMany(Course::class);
     }
+
+    public function getReviewLessonAttribute()
+    {
+        $users = $this->reviews;
+        return $users;
+    }
+
+    public function getLessonReviewNameAttribute()
+    {
+        $users = $this->reviews;
+        $lesson = $users->lessons;
+        return $lessons;
+    }
+
+    
 }

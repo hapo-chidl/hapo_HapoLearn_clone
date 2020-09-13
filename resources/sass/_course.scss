@@ -5,11 +5,10 @@
 .backend-course {
   .card {
     height: 470px;
-    border-radius: 15px 15px 0 0;
     margin-left: 3%;
+    border-radius: 10px 10px 0 0;
   
     .image {
-      height: 215px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
       border-radius: 15px 15px 0 0;
       text-align: center;
@@ -22,11 +21,7 @@
   margin-top: -150px;
   
   .card {
-    height: 395px;
-  
-    .image {
-      height: 194px;
-    }
+    height: 410px;
   }
 }
   
@@ -63,35 +58,7 @@
     transition: 0.4s;
   }
 }
-  
-.html-course {
-  background: #3F6185;
-}
-  
-.laravel-course {
-  background: #DC594C;
-}
-  
-.php-course {
-  background: #556598;
-}
-  
-.css-course {
-  background: #24ABE2;
-  
-  img {
-    padding-top: 30px;
-  }
-}
-  
-.ruby-course {
-  background: #E14E40;
-}
-  
-.java-course {
-  background-color: #1B75BB;
-}
-  
+
 .other-course {
   margin: 70px 0 15px 30%;
   letter-spacing: -0.02em;

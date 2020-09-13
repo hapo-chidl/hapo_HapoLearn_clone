@@ -13,10 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 Route::get('/list-course', 'CourseController@index')->name('list_course');
 Route::get('/list-course/{id}', 'CourseController@show')->name('course_detail');
+Route::get('/list-course/{courseId}/{lessonId}', 'LessonController@show')->name('lesson_detail');

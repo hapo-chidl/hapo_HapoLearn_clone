@@ -22,4 +22,20 @@ class Review extends Model
     {
         return $this->belongsToMany(User::class);
     }
+
+    public function getUserNameAttribute()
+    {
+        return $this->users();
+    }
+
+    public function getLessonNameAtribute()
+    {
+        return $this->lessons();
+    }
+
+    public function getCommentContentAttribute()
+    {
+        return $this->comment;
+    }
+
 }

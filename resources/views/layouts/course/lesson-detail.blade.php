@@ -4,14 +4,15 @@
 
 <div class="course-detail1 my-5 d-flex flex-row justify-content-center">
     <div class="course-detail col-5 mr-5 ">
-        <div class="course-detail-image mb-3">
-            <img src="{{ asset ($courseDetail->image) }}" style="width:770px;height:430px;  border-radius: 10px;" >
+        <div class="course-detail-image px-5 py-5">
+            <img  src="{{ asset('storage/image/course.png') }}">
         </div>
         <div class="list-about-course py-3">
             <div class = "list-title mb-3">
                 <ul class="nav pb-1">
-                    <li data-li="lesson" class="nav-item ml-5 active">Lessons</li>
+                    <li data-li="lesson" class="nav-item ml-5 active">Description</li>
                     <li data-li="teacher" class="nav-item ml-5">Teachers</li>
+                    <li data-li="program" class="nav-item ml-5">Program</li>
                     <li data-li="review" class="nav-item ml-5">Reviews</li>
                 </ul>
             </div>
@@ -42,7 +43,7 @@
         </div>
     <!-- </div> -->
     <div class="course-information col-3">
-        <div class="course-description mb-5">
+        <div class="course-description">
             <div class="description-title px-2 py-2"> Descriptions course </div>
             <div class="description-content px-2"> {{ $courseDetail ->description }} </div>
         </div>
